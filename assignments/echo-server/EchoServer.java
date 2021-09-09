@@ -53,7 +53,9 @@ public class EchoServer {
         ) {
             String inputLine;
             while ((inputLine = in.readLine()) != null) {
-                out.println(inputLine);
+                // NOTE: Shawn Cicoria - https://njit.cicoria.com
+                // NOTE: this is the change to make response uppercase
+                out.println(inputLine.toUpperCase());
             }
         } catch (IOException e) {
             System.out.println("Exception caught when trying to listen on port "
